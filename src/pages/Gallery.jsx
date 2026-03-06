@@ -16,6 +16,7 @@ const galleryImages = [
 
 export default function Gallery() {
     const [selectedImage, setSelectedImage] = useState(null);
+    const [showAllMobile, setShowAllMobile] = useState(false);
 
     return (
         <div className="py-20 px-4 max-w-7xl mx-auto min-h-screen">
@@ -46,7 +47,8 @@ export default function Gallery() {
                         whileInView={{ opacity: 1, scale: 1 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.5, delay: index * 0.1 }}
-                        className="break-inside-avoid relative group overflow-hidden rounded-xl cursor-pointer"
+                        className={`break-inside-avoid relative group overflow-hidden rounded-xl cursor-pointer ${!showAllMobile && index >= 4 ? 'hidden sm:block' : ''
+                            }`}
                         onClick={() => setSelectedImage(src)}
                     >
                         <img
@@ -58,6 +60,20 @@ export default function Gallery() {
                         <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                             <span className="text-white border border-white/50 px-4 py-2 rounded-full backdrop-blur-sm">View Larger</span>
                         </div>
+
+                        {/* Mobile Overlay on 4th image */}
+                        {!showAllMobile && index === 3 && galleryImages.length > 4 && (
+                            <div
+                                className="sm:hidden absolute inset-0 bg-brand-black/70 backdrop-blur-[2px] flex flex-col items-center justify-center text-white z-10 transition-opacity hover:bg-brand-black/80"
+                                onClick={(e) => {
+                                    e.stopPropagation();
+                                    setShowAllMobile(true);
+                                }}
+                            >
+                                <span className="text-4xl font-bold text-gold-500">+{galleryImages.length - 4}</span>
+                                <span className="text-sm font-semibold uppercase tracking-widest mt-2">More Images</span>
+                            </div>
+                        )}
                     </motion.div>
                 ))}
             </div>
