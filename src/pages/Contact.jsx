@@ -203,7 +203,9 @@ export default function Contact() {
                     </div>
 
                     {/* Map Embed */}
-                    <div className="rounded-3xl overflow-hidden shadow-xl h-64 border border-gray-100 dark:border-gray-800">
+                    <div className="rounded-3xl overflow-hidden shadow-xl h-64 border border-gray-100 dark:border-gray-800 relative">
+                        {/* Overlay to prevent interaction */}
+                        <div className="absolute inset-0 z-10"></div>
                         <iframe
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3859.1485417729195!2d78.4241699!3d17.523985!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb8f00679218ed%3A0xec0db2bb764b9576!2sPMR%20BANQUET%20HALLS%20%26%20LUXURY%20ROOMS!5e1!3m2!1sen!2sin!4v1772711945028!5m2!1sen!2sin"
                             width="100%"
@@ -213,7 +215,7 @@ export default function Contact() {
                             loading="lazy"
                             referrerPolicy="no-referrer-when-downgrade"
                             title="Google Map Location"
-                            className="grayscale-[0.2] contrast-[1.1]"
+                            className="grayscale-[0.2] contrast-[1.1] pointer-events-none"
                         ></iframe>
                     </div>
                 </motion.div>

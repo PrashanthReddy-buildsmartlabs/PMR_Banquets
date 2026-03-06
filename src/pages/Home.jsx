@@ -114,18 +114,18 @@ export default function Home() {
                     >
                         {/* Banquet Teaser */}
                         <motion.div variants={fadeUp} className="group cursor-pointer">
-                            <div className="relative overflow-hidden rounded-2xl aspect-[4/3] mb-6">
+                            <Link to="/services" className="block relative overflow-hidden rounded-2xl aspect-[4/3] mb-6">
                                 <img
-                                    src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&q=80&w=1000"
+                                    src="/images/1.jpg"
                                     alt="Grand Banquet Hall"
                                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-60 group-hover:opacity-80 transition-opacity" />
                                 <div className="absolute bottom-6 left-6 right-6">
-                                    <h4 className="text-2xl font-bold text-white mb-2">Grand Banquet Halls</h4>
-                                    <p className="text-gold-400 font-medium">Perfect for Weddings & Corporate Events</p>
+                                    <h4 className="text-2xl font-bold text-white mb-2 group-hover:text-gold-400 transition-colors">Grand Banquet Halls</h4>
+                                    <p className="text-gold-400 font-medium group-hover:text-white transition-colors">Perfect for Weddings & Corporate Events</p>
                                 </div>
-                            </div>
+                            </Link>
                             <p className="text-gray-600 dark:text-gray-400 mb-4 leading-relaxed line-clamp-3">
                                 Our opulent banquet halls are custom-designed to host grand celebrations. High ceilings, crystal chandeliers, and state-of-the-art acoustics create an enchanting atmosphere.
                             </p>
@@ -136,18 +136,18 @@ export default function Home() {
 
                         {/* Rooms Teaser */}
                         <motion.div variants={fadeUp} className="group cursor-pointer">
-                            <div className="relative overflow-hidden rounded-2xl aspect-[4/3] mb-6">
+                            <Link to="/services" className="block relative overflow-hidden rounded-2xl aspect-[4/3] mb-6">
                                 <img
-                                    src="https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&fit=crop&q=80&w=1000"
+                                    src="/images/3.jpg"
                                     alt="Luxury Suite"
                                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-60 group-hover:opacity-80 transition-opacity" />
                                 <div className="absolute bottom-6 left-6 right-6">
-                                    <h4 className="text-2xl font-bold text-white mb-2">Luxury Rooms & Suites</h4>
-                                    <p className="text-gold-400 font-medium">Premium Comfort & Amenities</p>
+                                    <h4 className="text-2xl font-bold text-white mb-2 group-hover:text-gold-400 transition-colors">Luxury Rooms & Suites</h4>
+                                    <p className="text-gold-400 font-medium group-hover:text-white transition-colors">Premium Comfort & Amenities</p>
                                 </div>
-                            </div>
+                            </Link>
                             <p className="text-gray-600 dark:text-gray-400 mb-4 leading-relaxed line-clamp-3">
                                 Experience unparalleled comfort in our luxury accommodations. Each room features premium bedding, modern amenities, and elegant decor for a restful stay.
                             </p>
