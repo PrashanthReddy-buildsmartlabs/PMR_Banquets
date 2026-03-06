@@ -126,18 +126,15 @@ export default function Layout() {
             </header>
 
             <main className="flex-grow">
-                <AnimatePresence mode="wait">
-                    <motion.div
-                        key={location.pathname}
-                        initial={{ opacity: 0, y: 10 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        exit={{ opacity: 0, y: -10 }}
-                        transition={{ duration: 0.3 }}
-                        className="w-full h-full"
-                    >
-                        <Outlet />
-                    </motion.div>
-                </AnimatePresence>
+                <motion.div
+                    key={location.pathname}
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.3 }}
+                    className="w-full h-full"
+                >
+                    <Outlet />
+                </motion.div>
             </main>
 
             <footer className="bg-gray-50 dark:bg-brand-dark border-t border-gray-200 dark:border-gray-800 py-12 transition-colors duration-300">
