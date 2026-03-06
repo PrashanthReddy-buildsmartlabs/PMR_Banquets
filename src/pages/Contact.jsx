@@ -213,7 +213,6 @@ export default function Contact() {
                             loading="lazy"
                             referrerPolicy="no-referrer-when-downgrade"
                             title="Google Map Location"
-                            className="grayscale-[0.2] contrast-[1.1]"
                         ></iframe>
                     </div>
                 </motion.div>
